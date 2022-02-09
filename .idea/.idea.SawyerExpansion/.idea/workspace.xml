@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f30f2d2c-cb33-418a-bfb3-39581834b04d" name="Default Changelist" comment="test">
+      <change afterPath="$PROJECT_DIR$/ClassesWithInstances/New.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ExtendClasses/Extends.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NuGet.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Patches/Patches.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plugin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Singleton/SawyerResourceManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/AbilitiesUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/CardUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/Enum.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/ImageUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonoBehaviour1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SawyerExpansion.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SawyerExpansion.csproj" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/NuGet.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/Enum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/AbilitiesUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files (x86)/NuGet/Config/Microsoft.VisualStudio.Offline.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/CardUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Plugin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ClassesWithInstances/New.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ExtendClasses/Extends.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Utils/ImageUtils.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/obj/Debug/netstandard2.0/SawyerExpansion.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Patches/Patches.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Singleton/SawyerResourceManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/MonoBehaviour1.cs" />
+        <option value="$PROJECT_DIR$/Main.cs" />
+        <option value="$PROJECT_DIR$/Properties/AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/SawyerExpansion.csproj" />
+        <option value="$PROJECT_DIR$/obj/Debug/netstandard2.0/SawyerExpansion.AssemblyInfo.cs" />
+        <option value="$PROJECT_DIR$/NuGet.config" />
+        <option value="$PROJECT_DIR$/packages.config" />
+        <option value="$PROJECT_DIR$/ExtendClasses/Extends.cs" />
+        <option value="$PROJECT_DIR$/ClassesWithInstances/Abilities.cs" />
+        <option value="$PROJECT_DIR$/Utils/Abilities.cs" />
+        <option value="$PROJECT_DIR$/Plugin.cs" />
+        <option value="$PROJECT_DIR$/Utils/Utils.cs" />
+        <option value="$PROJECT_DIR$/Utils/ImageUtils.cs" />
+        <option value="$PROJECT_DIR$/Utils/CardUtils.cs" />
+        <option value="$PROJECT_DIR$/Utils/Enum.cs" />
+        <option value="$PROJECT_DIR$/Singleton/SawyerResourceManager.cs" />
+        <option value="$PROJECT_DIR$/Utils/AbilitiesUtils.cs" />
+        <option value="$PROJECT_DIR$/Patches/Patches.cs" />
+        <option value="$PROJECT_DIR$/ClassesWithInstances/New.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="24s4UiRZMN6Q6ylhA8a5JSBuvvu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="RiderNuGetOptionsPageId" />
+  </component>
+  <component name="RunManager" selected=".NET Project.SawyerExpansion">
+    <configuration name="SawyerExpansion" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/SawyerExpansion.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f30f2d2c-cb33-418a-bfb3-39581834b04d" name="Default Changelist" comment="" />
+      <created>1644405978250</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644405978250</updated>
+      <workItem from="1644405990149" duration="4974000" />
+      <workItem from="1644411221363" duration="4656000" />
+    </task>
+    <task id="LOCAL-00001" summary="Test">
+      <created>1644406189665</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644406189665</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test">
+      <created>1644407172718</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644407172718</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Test" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="618" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1644410425771">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="618" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1644410425771" />
+    <state x="216" y="125" key="SettingsEditor" timestamp="1644412045757">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="216" y="125" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1644412045757" />
+    <state x="521" y="273" key="Vcs.Push.Dialog.v2" timestamp="1644407198157">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1644407198157" />
+    <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1644406172886">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1858.1080@0.0.1858.1080" timestamp="1644406172886" />
+  </component>
+</project>

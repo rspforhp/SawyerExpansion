@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Kopie.DESKTOP-UQFLITC\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Kopie.DESKTOP-UQFLITC\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_SawyerExpansion.1308235924.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Kopie.DESKTOP-UQFLITC\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\Kopie.DESKTOP-UQFLITC\Desktop\modding tryings\Новая папка\SawyerExpansion" t="IncludeRecursive">
+      <e p=".gitignore" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="ClassesWithInstances" t="Include">
+        <e p="SawyerCardInfo.cs" t="Include" />
+      </e>
+      <e p="ExtendClasses" t="Include">
+        <e p="Extends.cs" t="Include" />
+      </e>
+      <e p="NuGet.config" t="Include" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netstandard2.0" t="Include">
+            <e p="SawyerExpansion.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="packages.config" t="Include" />
+      <e p="Patches" t="Include">
+        <e p="Patches.cs" t="Include" />
+      </e>
+      <e p="Plugin.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="SawyerExpansion.csproj" t="IncludeRecursive" />
+      <e p="SawyerExpansion.sln" t="IncludeFlat" />
+      <e p="Singleton" t="Include">
+        <e p="SawyerResourceManager.cs" t="Include" />
+      </e>
+      <e p="Utils" t="Include">
+        <e p="AbilitiesUtils.cs" t="Include" />
+        <e p="CardUtils.cs" t="Include" />
+        <e p="Enum.cs" t="Include" />
+        <e p="ImageUtils.cs" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>
