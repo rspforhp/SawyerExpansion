@@ -6,7 +6,7 @@ using BepInEx;
 
 namespace SawyerExpansion
 {
-    public class MonoBehaviour1 : BepInExPlugin
+    public class MonoBehaviour1 : BaseUnityPlugin
     {
         
     }
