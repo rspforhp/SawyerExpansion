@@ -12,7 +12,9 @@ namespace SawyerExpansion.Utils
     public static class ImageUtils
     {
     
-            
+        public static Sprite[] heatTextures;
+
+        
             public static Texture2D LoadTexture(string NameOfFile)
             {
                 byte[] imgBytes =

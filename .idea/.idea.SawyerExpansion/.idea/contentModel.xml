@@ -8,6 +8,7 @@
       <e p=".gitignore" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="ClassesWithInstances" t="Include">
+        <e p="BurningTheCardComponent.cs" t="Include" />
         <e p="SawyerCardInfo.cs" t="Include" />
       </e>
       <e p="ExtendClasses" t="Include">

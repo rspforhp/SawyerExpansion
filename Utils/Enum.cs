@@ -4,6 +4,7 @@
     {
         public enum SawyerTemples
         {
+            None=0,
             Nature=1,
             Undead=2,
             Tech=3,

@@ -15,13 +15,18 @@ namespace SawyerExpansion.ClassesWithInstances
         {
 
            
-            internal static Dictionary<string, object> Fields=new Dictionary<string, object>();
+            internal Dictionary<string, object> Fields=new Dictionary<string, object>();
 
             private void Awake()
             {
-                Fields.Add("Heat", default);
-                Fields.Add("Temple", default);
-                Fields.Add("Ore", default);
+                object isUnused;
+                if (!Fields.TryGetValue("Heat", out isUnused))
+                {
+                    Fields.Add("Heat", default);
+                    Fields.Add("Temple", Enums.SawyerTemples.None);
+                    Fields.Add("Ore", default); 
+                }
+               
             }
             
             
