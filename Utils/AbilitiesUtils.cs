@@ -342,6 +342,7 @@ namespace SawyerExpansion.ClassesWithInstances
         private static Tuple<Ability, Type> AddAbilityHeatDependant()
         {
             {
+                
                 AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
                 info.powerLevel = 2;
                 info.rulebookName = "A heating fuel";
