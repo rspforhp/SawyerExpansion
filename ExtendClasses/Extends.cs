@@ -5,6 +5,7 @@ using GBC;
 using HarmonyLib;
 using BepInEx;
 using SawyerExpansion.ClassesWithInstances;
+using SawyerExpansion.Utils;
 
 namespace SawyerExpansion.ExtendClasses
 {
@@ -21,7 +22,8 @@ namespace SawyerExpansion.ExtendClasses
             }
             catch
             {
-                return ScriptableObject.CreateInstance<SawyerCardInfo>();
+                var value=ScriptableObject.CreateInstance<SawyerCardInfo>();
+                return value;
 
             }
         }

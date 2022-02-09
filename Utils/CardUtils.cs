@@ -26,8 +26,22 @@ namespace SawyerExpansion.Utils
                 cardinfo.appearanceBehaviour=new List<CardAppearanceBehaviour.Appearance>() {CardAppearanceBehaviour.Appearance.TerrainBackground};
                 cardinfo.baseAttack = 0;
                 cardinfo.baseHealth = 1;
-                cardinfo.abilities.Add(AbilitiesUtils.AbilityBehaviours.CoolingRage.ability);
+                cardinfo.abilities.Add(AbilitiesUtils.AbilityBehaviours.Coal.ability);
                 cardinfo.ConvertToSCI().HeatCost = 1;
+                cardinfo.ConvertToSCI().Temple = Enums.SawyerTemples.Martel;
+                allcards.Add(cardinfo);
+            }
+            {
+                var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
+                cardinfo.name = "Furnace";
+                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("furnace"));
+                cardinfo.displayedName = "Furnace";
+                cardinfo.metaCategories=new List<CardMetaCategory>(){CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable};
+                cardinfo.baseAttack = 0;
+                cardinfo.baseHealth = 1;
+                cardinfo.temple = CardTemple.Wizard;
+                cardinfo.abilities.Add(AbilitiesUtils.AbilityBehaviours.HeatingRage.ability);
+                cardinfo.ConvertToSCI().HeatCost = 9;
                 cardinfo.ConvertToSCI().Temple = Enums.SawyerTemples.Martel;
                 allcards.Add(cardinfo);
             }
@@ -35,17 +49,76 @@ namespace SawyerExpansion.Utils
                 var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
                 cardinfo.name = "BlastFurnace";
                 cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("bfurnace"));
-                cardinfo.displayedName = "BlastFurnace";
+                cardinfo.displayedName = "Blast Furnace";
                 cardinfo.temple = CardTemple.Wizard;
                 cardinfo.metaCategories=new List<CardMetaCategory>() {CardMetaCategory.Rare, CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable};
                 cardinfo.appearanceBehaviour=new List<CardAppearanceBehaviour.Appearance>() {CardAppearanceBehaviour.Appearance.RareCardBackground};
                 cardinfo.baseAttack = 0;
-                cardinfo.baseHealth = 1;
+                cardinfo.baseHealth = 3;
                 cardinfo.abilities.Add(AbilitiesUtils.AbilityBehaviours.CoolingRage.ability);
                 cardinfo.ConvertToSCI().HeatCost = 3;
                 cardinfo.ConvertToSCI().Temple = Enums.SawyerTemples.Martel;
                 allcards.Add(cardinfo);
             }
+            {
+                var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
+                cardinfo.name = "FireFox";
+                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("firefox"));
+                cardinfo.displayedName = "Fire Fox";
+                cardinfo.temple = CardTemple.Wizard;
+                cardinfo.metaCategories=new List<CardMetaCategory>() { CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable};
+                cardinfo.appearanceBehaviour=new List<CardAppearanceBehaviour.Appearance>() {CardAppearanceBehaviour.Appearance.RareCardBackground};
+                cardinfo.baseAttack = 3;
+                cardinfo.baseHealth = 1;
+                cardinfo.abilities.Add(AbilitiesUtils.AbilityBehaviours.HeatDependant.ability);
+                cardinfo.ConvertToSCI().HeatCost = 5;
+                cardinfo.ConvertToSCI().Temple = Enums.SawyerTemples.Martel;
+                allcards.Add(cardinfo);
+            }
+            {
+                var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
+                cardinfo.name = "GDragon";
+                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("gorgeousdragon"));
+                cardinfo.displayedName = "Gorgeous Dragon";
+                cardinfo.appearanceBehaviour=new List<CardAppearanceBehaviour.Appearance>() {CardAppearanceBehaviour.Appearance.RareCardBackground};
+                cardinfo.metaCategories=new List<CardMetaCategory>() { CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable, CardMetaCategory.Rare};
+                cardinfo.temple = CardTemple.Wizard;
+                cardinfo.baseAttack = 1;
+                cardinfo.baseHealth = 6;
+                cardinfo.abilities.Add(AbilitiesUtils.AbilityBehaviours.ScorchingHeat.ability);
+                cardinfo.ConvertToSCI().Temple=Enums.SawyerTemples.Martel;
+                cardinfo.ConvertToSCI().HeatCost=7;
+                allcards.Add(cardinfo);
+            }
+            {
+                var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
+                cardinfo.name = "CoalFiend";
+                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("strangebatpixel"));
+                cardinfo.displayedName = "Coal Fiend";
+                cardinfo.metaCategories=new List<CardMetaCategory>() { CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable};
+                cardinfo.temple = CardTemple.Wizard;
+                cardinfo.baseAttack = 2;
+                cardinfo.baseHealth = 1;
+                cardinfo.abilities=new List<Ability>(){AbilitiesUtils.AbilityBehaviours.HeatChasing.ability, Ability.Evolve};
+                cardinfo.ConvertToSCI().Temple=Enums.SawyerTemples.Martel;
+                cardinfo.ConvertToSCI().HeatCost=4;
+                allcards.Add(cardinfo);
+            }
+            {
+                var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
+                cardinfo.name = "SteamBot";
+                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("firefox"));
+                cardinfo.displayedName = "Steam Bot";
+                cardinfo.metaCategories=new List<CardMetaCategory>() { CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable};
+                cardinfo.temple = CardTemple.Wizard;
+                cardinfo.baseAttack = 1;
+                cardinfo.baseHealth = 3;
+                cardinfo.abilities=new List<Ability>(){AbilitiesUtils.AbilityBehaviours.SwappingPower.ability};
+                cardinfo.ConvertToSCI().Temple=Enums.SawyerTemples.Martel;
+                cardinfo.ConvertToSCI().HeatCost=5;
+                allcards.Add(cardinfo);
+            }
+            
             foreach (var card in allcards)
             {
                 NewCard.Add(card);

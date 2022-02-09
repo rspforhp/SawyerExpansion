@@ -17,14 +17,13 @@ namespace SawyerExpansion.ClassesWithInstances
            
             internal Dictionary<string, object> Fields=new Dictionary<string, object>();
 
-            private void Awake()
+            private void OnEnable()
             {
-                object isUnused;
-                if (!Fields.TryGetValue("Heat", out isUnused))
+                Plugin.PluginDetails.Log.LogDebug("SawyerCardInfoCreated");
                 {
-                    Fields.Add("Heat", default);
+                    Fields.Add("Heat", 0);
                     Fields.Add("Temple", Enums.SawyerTemples.None);
-                    Fields.Add("Ore", default); 
+                    Fields.Add("Ore", new Tuple<Enums.OresEnum, int>(Enums.OresEnum.Bronze, 0)); 
                 }
                
             }
