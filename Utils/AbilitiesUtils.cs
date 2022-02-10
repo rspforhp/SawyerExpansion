@@ -8,6 +8,7 @@ using SawyerExpansion.ExtendClasses;
 using SawyerExpansion.Singleton;
 using SawyerExpansion.Utils;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace SawyerExpansion.ClassesWithInstances
 {
@@ -23,13 +24,14 @@ namespace SawyerExpansion.ClassesWithInstances
             allabilities.Add(AddAbilityScHeat());
             allabilities.Add(AddAbilityHeatChasing());
             allabilities.Add(AddAbilityHeatSwapper());
+            allabilities.Add(AddAbilityPorcelain());
 
             return allabilities;
         }
 
         internal static class AbilityBehaviours
         {
-            		public class SwappingPower : AbilityBehaviour
+            public class SwappingPower : AbilityBehaviour
 		{
 			public override Ability Ability
 			{
@@ -87,7 +89,7 @@ namespace SawyerExpansion.ClassesWithInstances
 							base.Card.SwitchToDefaultPortrait();
 						}
 					}
-					int health = base.Card.Health;
+                    int health = base.Card.Health;
 					base.Card.HealDamage(base.Card.Status.damageTaken);
 					int attack = base.Card.Attack;
 					this.mod.attackAdjustment = health;
@@ -109,7 +111,6 @@ namespace SawyerExpansion.ClassesWithInstances
 				yield break;
 			}
 		}
-
             public class HeatChasing : AbilityBehaviour
             {
                 public override Ability Ability
@@ -142,7 +143,6 @@ namespace SawyerExpansion.ClassesWithInstances
                     yield break;
                 }
             }
-
             public class CoolingRage : AbilityBehaviour
             {
                 
@@ -168,7 +168,7 @@ namespace SawyerExpansion.ClassesWithInstances
                     if (wasSacrifice && !Card.InHand&&killer.InHand)
                     {
                         i++;
-                        if (i == 2)
+                        if (i == 3)
                         {
                             this.Card.AddTemporaryMod(new CardModificationInfo(1,0));
                             i = 0;
@@ -302,8 +302,59 @@ namespace SawyerExpansion.ClassesWithInstances
                     yield break;
                 }
             }
+            public class OutOfPorcelain : AbilityBehaviour
+            {
+        
+                public override Ability Ability
+                {
+                    get
+                    {
+                        return ability;
+                    }
+                }
+
+                public static Ability ability;
+
+                public string singletonId = "MadeOutOfPorcelain";
+                
+                public override bool RespondsToTurnEnd(bool playerTurnEnd)
+                {
+                    return playerTurnEnd;
+                }
+
+                public override IEnumerator OnTurnEnd(bool playerTurnEnd)
+                {
+                    var card=this.Card as PixelPlayableCard;
+                     (card.Anim as PixelCardAnimationController).SetShaking(true);
+                     yield return new WaitForSeconds(0.4f);
+                     (card.Anim as PixelCardAnimationController).SetShaking(false);
+                     var cardmod=new CardModificationInfo();
+                    cardmod.singletonId = singletonId;
+                    cardmod.abilities=new List<Ability>(){AbilitiesUtil.allData[SeededRandom.Range(0, AbilitiesUtil.allData.Count, SaveManager.saveFile.randomSeed++)].ability};
+                    card.AddTemporaryMod(cardmod);
+                    yield break;
+                }
+            }
 
         }
+        private static Tuple<Ability, Type> AddAbilityPorcelain()
+        {
+            {
+                AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
+                info.powerLevel = 4;
+                info.rulebookName = "Porcelain - material";
+                info.rulebookDescription = "When player turn ends, gain a random sigil!";
+                var tex = ImageUtils.LoadTexture("readme");
+                info.pixelIcon=ImageUtils.ConvertToSprite(tex);
+                var behavior = typeof(AbilityBehaviours.OutOfPorcelain);
+                NewAbility ability = new NewAbility(info, behavior, tex, AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
+                AbilityBehaviours.OutOfPorcelain.ability = ability.ability;
+                return new Tuple<Ability, Type>(ability.ability, behavior);
+
+            }
+        }
+
+        
         private static Tuple<Ability, Type> AddAbilityHeatSwapper()
         {
             {
@@ -412,7 +463,7 @@ namespace SawyerExpansion.ClassesWithInstances
                 AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
                 info.powerLevel = 4;
                 info.rulebookName = "Heating iron";
-                info.rulebookDescription = "While Blast Furnace is on the board, it gains 1 Power for every 2 cards burned!";
+                info.rulebookDescription = "While Blast Furnace is on the board, it gains 1 Power for every 3 cards burned!";
                 var behavior = typeof(AbilityBehaviours.CoolingRage);
                 NewAbility ability = new NewAbility(info, behavior, ImageUtils.LoadTexture("readme"), AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
                 AbilityBehaviours.CoolingRage.ability = ability.ability;

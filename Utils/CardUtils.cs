@@ -47,9 +47,9 @@ namespace SawyerExpansion.Utils
             }
             {
                 var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
-                cardinfo.name = "BlastFurnace";
+                cardinfo.name = "Anvil";
                 cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("bfurnace"));
-                cardinfo.displayedName = "Blast Furnace";
+                cardinfo.displayedName = "Anvil";
                 cardinfo.temple = CardTemple.Wizard;
                 cardinfo.metaCategories=new List<CardMetaCategory>() {CardMetaCategory.Rare, CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable};
                 cardinfo.appearanceBehaviour=new List<CardAppearanceBehaviour.Appearance>() {CardAppearanceBehaviour.Appearance.RareCardBackground};
@@ -107,7 +107,7 @@ namespace SawyerExpansion.Utils
             {
                 var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
                 cardinfo.name = "SteamBot";
-                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("firefox"));
+                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("steambot"));
                 cardinfo.displayedName = "Steam Bot";
                 cardinfo.metaCategories=new List<CardMetaCategory>() { CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable};
                 cardinfo.temple = CardTemple.Wizard;
@@ -116,6 +116,20 @@ namespace SawyerExpansion.Utils
                 cardinfo.abilities=new List<Ability>(){AbilitiesUtils.AbilityBehaviours.SwappingPower.ability};
                 cardinfo.ConvertToSCI().Temple=Enums.SawyerTemples.Martel;
                 cardinfo.ConvertToSCI().HeatCost=5;
+                allcards.Add(cardinfo);
+            }
+            {
+                var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
+                cardinfo.name = "PorcelaineGolem";
+                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("noart"));
+                cardinfo.displayedName = "Porcelaine Golem";
+                cardinfo.metaCategories=new List<CardMetaCategory>() { CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable, CardMetaCategory.Rare};
+                cardinfo.temple = CardTemple.Wizard;
+                cardinfo.baseAttack = 0;
+                cardinfo.baseHealth = 1;
+                cardinfo.abilities=new List<Ability>(){AbilitiesUtils.AbilityBehaviours.OutOfPorcelain.ability};
+                cardinfo.ConvertToSCI().Temple=Enums.SawyerTemples.Martel;
+                cardinfo.ConvertToSCI().HeatCost=2;
                 allcards.Add(cardinfo);
             }
             

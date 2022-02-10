@@ -6,6 +6,15 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:SawyerExpansion" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
@@ -16,10 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f30f2d2c-cb33-418a-bfb3-39581834b04d" name="Default Changelist" comment="Ported all patches, still has errors.">
+    <list default="true" id="f30f2d2c-cb33-418a-bfb3-39581834b04d" name="Default Changelist" comment="as">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassesWithInstances/SawyerCardInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ClassesWithInstances/SawyerCardInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtendClasses/Extends.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ExtendClasses/Extends.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils/AbilitiesUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/AbilitiesUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils/CardUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/CardUtils.cs" afterDir="false" />
     </list>
@@ -35,6 +42,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/NuGet.config" root0="FORCE_HIGHLIGHTING" />
@@ -140,7 +148,8 @@
       <option name="presentableId" value="Default" />
       <updated>1644405978250</updated>
       <workItem from="1644405990149" duration="4974000" />
-      <workItem from="1644411221363" duration="19964000" />
+      <workItem from="1644411221363" duration="20240000" />
+      <workItem from="1644493951872" duration="5319000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1644406189665</created>
@@ -170,7 +179,28 @@
       <option name="project" value="LOCAL" />
       <updated>1644422570569</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ported all patches, still has errors.">
+      <created>1644433067239</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644433067239</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Ported all things, no bugs, tomorrow will ad more stuff">
+      <created>1644433109650</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644433109650</updated>
+    </task>
+    <task id="LOCAL-00007" summary="as">
+      <created>1644433283511</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644433283511</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
@@ -210,7 +240,9 @@
     <MESSAGE value="test" />
     <MESSAGE value="SomeOfStuffPorted" />
     <MESSAGE value="Ported all patches, still has errors." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ported all patches, still has errors." />
+    <MESSAGE value="Ported all things, no bugs, tomorrow will ad more stuff" />
+    <MESSAGE value="as" />
+    <option name="LAST_COMMIT_MESSAGE" value="as" />
   </component>
   <component name="WindowStateProjectService">
     <state x="618" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1644410425771">
@@ -221,14 +253,18 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="676" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1858.1080@0.0.1858.1080" timestamp="1644415893976" />
+    <state x="92" y="92" width="1674" height="896" key="DiffContextDialog" timestamp="1644433341947">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="92" y="92" width="1674" height="896" key="DiffContextDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1644433341947" />
     <state x="216" y="125" key="SettingsEditor" timestamp="1644412045757">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="216" y="125" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1644412045757" />
-    <state x="521" y="273" key="Vcs.Push.Dialog.v2" timestamp="1644422579870">
+    <state x="521" y="273" key="Vcs.Push.Dialog.v2" timestamp="1644433299816">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
-    <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1644422579870" />
+    <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1644433299816" />
     <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1644406172886">
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
