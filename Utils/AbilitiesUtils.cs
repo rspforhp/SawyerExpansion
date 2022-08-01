@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using APIPlugin;
 using DiskCardGame;
 using GBC;
+using InscryptionAPI.Card;
 using SawyerExpansion.ExtendClasses;
 using SawyerExpansion.Singleton;
 using SawyerExpansion.Utils;
@@ -134,7 +135,7 @@ namespace SawyerExpansion.ClassesWithInstances
                     if (wasSacrifice && !Card.InHand&&killer.InHand)
                     {
                         {
-                            this.StartCoroutine(Singleton<PixelPlayerHand>.Instance.AddCardToHand(this.Card));
+                            this.StartCoroutine(Singleton<PixelPlayerHand>.Instance.AddCardToHand(this.Card, Vector3.zero, 0));
                             Card.UnassignFromSlot();
                             Card.gameObject.GetComponent<BoxCollider2D>().enabled = true;
                         }
@@ -347,9 +348,9 @@ namespace SawyerExpansion.ClassesWithInstances
                 var tex = ImageUtils.LoadTexture("readme");
                 info.pixelIcon=ImageUtils.ConvertToSprite(tex);
                 var behavior = typeof(AbilityBehaviours.OutOfPorcelain);
-                NewAbility ability = new NewAbility(info, behavior, tex, AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
-                AbilityBehaviours.OutOfPorcelain.ability = ability.ability;
-                return new Tuple<Ability, Type>(ability.ability, behavior);
+                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
+                AbilityBehaviours.OutOfPorcelain.ability = ability.Id;
+                return new Tuple<Ability, Type>(ability.Id, behavior);
 
             }
         }
@@ -365,9 +366,9 @@ namespace SawyerExpansion.ClassesWithInstances
                 var tex = ImageUtils.LoadTexture("readme");
                 info.pixelIcon=ImageUtils.ConvertToSprite(tex);
                 var behavior = typeof(AbilityBehaviours.SwappingPower);
-                NewAbility ability = new NewAbility(info, behavior, tex, AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
-                AbilityBehaviours.SwappingPower.ability = ability.ability;
-                return new Tuple<Ability, Type>(ability.ability, behavior);
+                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
+                AbilityBehaviours.SwappingPower.ability = ability.Id;
+                return new Tuple<Ability, Type>(ability.Id, behavior);
 
             }
         }
@@ -382,9 +383,9 @@ namespace SawyerExpansion.ClassesWithInstances
                 var tex = ImageUtils.LoadTexture("readme");
                 info.pixelIcon=ImageUtils.ConvertToSprite(tex);
                 var behavior = typeof(AbilityBehaviours.HeatChasing);
-                NewAbility ability = new NewAbility(info, behavior, tex, AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
-                AbilityBehaviours.HeatChasing.ability = ability.ability;
-                return new Tuple<Ability, Type>(ability.ability, behavior);
+                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
+                AbilityBehaviours.HeatChasing.ability = ability.Id;
+                return new Tuple<Ability, Type>(ability.Id, behavior);
 
             }
         }
@@ -401,9 +402,10 @@ namespace SawyerExpansion.ClassesWithInstances
                 var tex = ImageUtils.LoadTexture("heatdependant");
                 info.pixelIcon=ImageUtils.ConvertToSprite(tex);
                 var behavior = typeof(AbilityBehaviours.HeatDependant);
-                NewAbility ability = new NewAbility(info, behavior, tex, AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
-                AbilityBehaviours.HeatDependant.ability = ability.ability;
-                return new Tuple<Ability, Type>(ability.ability, behavior);
+                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
+
+                AbilityBehaviours.HeatDependant.ability = ability.Id;
+                return new Tuple<Ability, Type>(ability.Id, behavior);
 
             }
         }
@@ -417,9 +419,10 @@ namespace SawyerExpansion.ClassesWithInstances
                 info.rulebookDescription = "When this creature is  on board, all creatures except this take 1 damage at the end of a turn!";
                 var tex = ImageUtils.LoadTexture("readme");
                 var behaviour = typeof(AbilityBehaviours.ScorchingHeat);
-                NewAbility ability = new NewAbility(info, behaviour, tex, AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
-                AbilityBehaviours.ScorchingHeat.ability = ability.ability;
-                return new Tuple<Ability, Type>(ability.ability, behaviour);
+                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behaviour, tex);
+
+                AbilityBehaviours.ScorchingHeat.ability = ability.Id;
+                return new Tuple<Ability, Type>(ability.Id, behaviour);
 
             }
         }
@@ -437,9 +440,10 @@ namespace SawyerExpansion.ClassesWithInstances
                 var tex = ImageUtils.LoadTexture("heatingrage");
                 info.pixelIcon=ImageUtils.ConvertToSprite(tex);
                 var behavior = typeof(AbilityBehaviours.HeatingRage);
-                NewAbility ability = new NewAbility(info, behavior, tex, AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
-                AbilityBehaviours.HeatingRage.ability = ability.ability;
-                return new Tuple<Ability, Type>(ability.ability, behavior);
+                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
+
+                AbilityBehaviours.HeatingRage.ability = ability.Id;
+                return new Tuple<Ability, Type>(ability.Id, behavior);
             }
         }
         
@@ -451,9 +455,10 @@ namespace SawyerExpansion.ClassesWithInstances
                 info.rulebookName = "A heating fuel";
                 info.rulebookDescription = "When this is burned you are awarded with 3 heat instead of 1!";
                 var behavior = typeof(AbilityBehaviours.Coal);
-                NewAbility ability = new NewAbility(info, behavior, ImageUtils.LoadTexture("readme"), AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
-                AbilityBehaviours.Coal.ability = ability.ability;
-                return new Tuple<Ability, Type>(ability.ability, behavior);
+                Texture2D tex = default;
+                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
+                AbilityBehaviours.Coal.ability = ability.Id;
+                return new Tuple<Ability, Type>(ability.Id, behavior);
             }
         }
 
@@ -465,9 +470,10 @@ namespace SawyerExpansion.ClassesWithInstances
                 info.rulebookName = "Heating iron";
                 info.rulebookDescription = "While Blast Furnace is on the board, it gains 1 Power for every 3 cards burned!";
                 var behavior = typeof(AbilityBehaviours.CoolingRage);
-                NewAbility ability = new NewAbility(info, behavior, ImageUtils.LoadTexture("readme"), AbilityIdentifier.GetID(Plugin.PluginDetails.PluginGuid, info.rulebookName));
-                AbilityBehaviours.CoolingRage.ability = ability.ability;
-                return new Tuple<Ability, Type>(ability.ability, behavior);
+                Texture2D tex = default;
+                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
+                AbilityBehaviours.CoolingRage.ability = ability.Id;
+                return new Tuple<Ability, Type>(ability.Id, behavior);
             }
         }
     }

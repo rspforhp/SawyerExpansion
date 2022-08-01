@@ -2,6 +2,7 @@
 using APIPlugin;
 using System.Collections.Generic;
 using DiskCardGame;
+using InscryptionAPI.Card;
 using SawyerExpansion.ClassesWithInstances;
 using SawyerExpansion.ExtendClasses;
 using UnityEngine;
@@ -135,7 +136,7 @@ namespace SawyerExpansion.Utils
             
             foreach (var card in allcards)
             {
-                NewCard.Add(card);
+                CardManager.Add(Plugin.PluginDetails.PluginGuid,card);
             }
             return allcards;
         }
