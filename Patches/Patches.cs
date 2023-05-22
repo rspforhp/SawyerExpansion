@@ -774,7 +774,7 @@ namespace SawyerExpansion.Patches
 							button.coll2D = button.gameObject.GetComponent<BoxCollider2D>();
 							Singleton<CollectionUI>.Instance.tabButtons.Add(button);
 							var SmithCardsz = Singleton<CollectionUI>.Instance.collectionCards.FindAll(info =>
-								info.ConvertToSCI().Temple != Enums.SawyerTemples.None).Distinct().ToList();
+								info.ConvertToSCI()?.Temple != Enums.SawyerTemples.None).Distinct().ToList();
 							List<CardInfo> SmithCards = new List<CardInfo>();
 							foreach (var b in SmithCardsz)
 							{

@@ -25,15 +25,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f30f2d2c-cb33-418a-bfb3-39581834b04d" name="Default Changelist" comment="as">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/.idea.SawyerExpansion.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="f30f2d2c-cb33-418a-bfb3-39581834b04d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SawyerExpansion/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SawyerExpansion.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SawyerExpansion.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SawyerExpansion.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SawyerExpansion.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/AbilitiesUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/AbilitiesUtils.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,15 +99,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "rider.run.widget.enabled.cache": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.SawyerExpansion">
     <configuration name="SawyerExpansion" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -169,7 +162,8 @@
       <workItem from="1644405990149" duration="4974000" />
       <workItem from="1644411221363" duration="20240000" />
       <workItem from="1644493951872" duration="5319000" />
-      <workItem from="1659345355088" duration="330000" />
+      <workItem from="1659345355088" duration="588000" />
+      <workItem from="1659383484829" duration="102000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1644406189665</created>
@@ -220,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644433283511</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added lib and updated the api usages">
+      <created>1659345934688</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1659345934688</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,36 +266,7 @@
     <MESSAGE value="Ported all patches, still has errors." />
     <MESSAGE value="Ported all things, no bugs, tomorrow will ad more stuff" />
     <MESSAGE value="as" />
-    <option name="LAST_COMMIT_MESSAGE" value="as" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="618" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1644410425771">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="618" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1858.1080@0.0.1858.1080" timestamp="1644410425771" />
-    <state x="676" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1644415893976">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="676" y="385" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/0.0.1858.1080@0.0.1858.1080" timestamp="1644415893976" />
-    <state x="92" y="92" width="1674" height="896" key="DiffContextDialog" timestamp="1644433341947">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="92" y="92" width="1674" height="896" key="DiffContextDialog/0.0.1858.1080@0.0.1858.1080" timestamp="1644433341947" />
-    <state x="216" y="125" key="SettingsEditor" timestamp="1644412045757">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="216" y="125" key="SettingsEditor/0.0.1858.1080@0.0.1858.1080" timestamp="1644412045757" />
-    <state x="521" y="273" key="Vcs.Push.Dialog.v2" timestamp="1644433299816">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="521" y="273" key="Vcs.Push.Dialog.v2/0.0.1858.1080@0.0.1858.1080" timestamp="1644433299816" />
-    <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1644406172886">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="738" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1858.1080@0.0.1858.1080" timestamp="1644406172886" />
-    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1644421612267">
-      <screen x="0" y="0" width="1858" height="1080" />
-    </state>
-    <state x="592" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080@0.0.1858.1080" timestamp="1644421612267" />
+    <MESSAGE value="Added lib and updated the api usages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added lib and updated the api usages" />
   </component>
 </project>

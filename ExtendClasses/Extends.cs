@@ -4,6 +4,7 @@ using DiskCardGame;
 using GBC;
 using HarmonyLib;
 using BepInEx;
+using JetBrains.Annotations;
 using SawyerExpansion.ClassesWithInstances;
 using SawyerExpansion.Utils;
 
@@ -12,6 +13,7 @@ namespace SawyerExpansion.ExtendClasses
     public static class Extends
     {
         
+        [CanBeNull]
         public static SawyerCardInfo ConvertToSCI(this CardInfo cardInfo)
         {
             SawyerCardInfo returnvalue;

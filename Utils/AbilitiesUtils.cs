@@ -15,19 +15,16 @@ namespace SawyerExpansion.ClassesWithInstances
 {
     public static class AbilitiesUtils
     {
-        public static List<Tuple<Ability, Type>> AddAbilities()
+        public static void AddAbilities()
         {
-            var allabilities = new List<Tuple<Ability, Type>>();
-            allabilities.Add(AddAbilityCRage());
-            allabilities.Add(AddAbilityCoal());
-            allabilities.Add(AddAbilityHrage());
-            allabilities.Add(AddAbilityHeatDependant());
-            allabilities.Add(AddAbilityScHeat());
-            allabilities.Add(AddAbilityHeatChasing());
-            allabilities.Add(AddAbilityHeatSwapper());
-            allabilities.Add(AddAbilityPorcelain());
-
-            return allabilities;
+            //allabilities.Add(AddAbilityCRage());
+            AddAbilityCoal();
+            //allabilities.Add(AddAbilityHrage());
+            AddAbilityHeatDependant();
+            //allabilities.Add(AddAbilityScHeat());
+            //allabilities.Add(AddAbilityHeatChasing());
+            //allabilities.Add(AddAbilityHeatSwapper());
+            //allabilities.Add(AddAbilityPorcelain());
         }
 
         internal static class AbilityBehaviours
@@ -391,22 +388,13 @@ namespace SawyerExpansion.ClassesWithInstances
         }
 
         
-        private static Tuple<Ability, Type> AddAbilityHeatDependant()
+        private static void AddAbilityHeatDependant()
         {
             {
-                
-                AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-                info.powerLevel = 2;
-                info.rulebookName = "A heating fuel";
-                info.rulebookDescription = "When this creature is  on board and you have less than 5 heat, this perishes!";
-                var tex = ImageUtils.LoadTexture("heatdependant");
-                info.pixelIcon=ImageUtils.ConvertToSprite(tex);
-                var behavior = typeof(AbilityBehaviours.HeatDependant);
-                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
-
-                AbilityBehaviours.HeatDependant.ability = ability.Id;
-                return new Tuple<Ability, Type>(ability.Id, behavior);
-
+                var a=AbilityManager.New(Plugin.PluginDetails.PluginGuid,"Heat Dependant",
+                    "When this creature is  on board and you have less than 5 heat, this perishes!",
+                    typeof(AbilityBehaviours.HeatDependant), "Artwork\\" + "heatdependant" + ".png");
+                AbilityBehaviours.HeatDependant.ability = a.ability;
             }
         }
 
@@ -447,19 +435,12 @@ namespace SawyerExpansion.ClassesWithInstances
             }
         }
         
-        private static Tuple<Ability, Type> AddAbilityCoal()
+        private static void AddAbilityCoal()
         {
-            {
-                AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
-                info.powerLevel = 2;
-                info.rulebookName = "A heating fuel";
-                info.rulebookDescription = "When this is burned you are awarded with 3 heat instead of 1!";
-                var behavior = typeof(AbilityBehaviours.Coal);
-                Texture2D tex = default;
-                var ability=AbilityManager.Add(Plugin.PluginDetails.PluginGuid, info, behavior, tex);
-                AbilityBehaviours.Coal.ability = ability.Id;
-                return new Tuple<Ability, Type>(ability.Id, behavior);
-            }
+            var a=AbilityManager.New(Plugin.PluginDetails.PluginGuid,"Flammable",
+                "Gives 2 more heat when burned!",
+                typeof(AbilityBehaviours.Coal), "Artwork\\" + "flammable" + ".png");
+            AbilityBehaviours.Coal.ability = a.ability;
         }
 
         private static Tuple<Ability, Type> AddAbilityCRage()

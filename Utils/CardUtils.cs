@@ -1,8 +1,11 @@
 ﻿using System;
 using APIPlugin;
 using System.Collections.Generic;
+using System.Reflection;
 using DiskCardGame;
+using HarmonyLib;
 using InscryptionAPI.Card;
+using InscryptionAPI.Guid;
 using SawyerExpansion.ClassesWithInstances;
 using SawyerExpansion.ExtendClasses;
 using UnityEngine;
@@ -13,25 +16,37 @@ namespace SawyerExpansion.Utils
     {
 
    
+
+        public static CardInfo New(
+            string modPrefix,
+            string name,
+            string displayName,
+            int attack,
+            int health,
+            string description = null)
+        {
+            CardInfo instance = ScriptableObject.CreateInstance<SawyerCardInfo>();
+            instance.name = !name.StartsWith(modPrefix) ? modPrefix + "_" + name : name;
+            instance.SetBasic(displayName, attack, health, description);
+            Assembly callingAssembly = Assembly.GetCallingAssembly();
+           
+            instance.SetExtendedProperty("CallStackModGUID", (object) TypeManager.GetModIdFromCallstack(callingAssembly));
+            CardManager.Add(modPrefix, instance);
+            return instance;
+        }
+
         
         public static List<CardInfo> AddCards()
         {
             var allcards=new List<CardInfo>();
             {
-                var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
-                cardinfo.name = "Coal";
-                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("coal"));
-                cardinfo.displayedName = "Coal Piece";
+                var cardinfo=New(Plugin.PluginDetails.PluginGuid, "Coal", "Coal Piece", 0,1).AddAbilities(AbilitiesUtils.AbilityBehaviours.Coal.ability).AddAppearances(CardAppearanceBehaviour.Appearance.TerrainBackground).AddMetaCategories(CardMetaCategory.GBCPack,CardMetaCategory.GBCPlayable).SetPixelPortrait("Artwork\\coal.png");
                 cardinfo.temple = CardTemple.Wizard;
-                cardinfo.metaCategories=new List<CardMetaCategory>(){CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable};
-                cardinfo.appearanceBehaviour=new List<CardAppearanceBehaviour.Appearance>() {CardAppearanceBehaviour.Appearance.TerrainBackground};
-                cardinfo.baseAttack = 0;
-                cardinfo.baseHealth = 1;
-                cardinfo.abilities.Add(AbilitiesUtils.AbilityBehaviours.Coal.ability);
                 cardinfo.ConvertToSCI().HeatCost = 1;
                 cardinfo.ConvertToSCI().Temple = Enums.SawyerTemples.Martel;
-                allcards.Add(cardinfo);
+                Plugin.PluginDetails.Log.LogInfo("Added card with id "+cardinfo.name);
             }
+            /*
             {
                 var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
                 cardinfo.name = "Furnace";
@@ -122,7 +137,7 @@ namespace SawyerExpansion.Utils
             {
                 var cardinfo = ScriptableObject.CreateInstance<SawyerCardInfo>();
                 cardinfo.name = "PorcelaineGolem";
-                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("noart"));
+                cardinfo.pixelPortrait =Utils.ImageUtils.ConvertToSprite(Utils.ImageUtils.LoadTexture("wip"));
                 cardinfo.displayedName = "Porcelaine Golem";
                 cardinfo.metaCategories=new List<CardMetaCategory>() { CardMetaCategory.GBCPack, CardMetaCategory.GBCPlayable, CardMetaCategory.Rare};
                 cardinfo.temple = CardTemple.Wizard;
@@ -133,7 +148,7 @@ namespace SawyerExpansion.Utils
                 cardinfo.ConvertToSCI().HeatCost=2;
                 allcards.Add(cardinfo);
             }
-            
+            */
             foreach (var card in allcards)
             {
                 CardManager.Add(Plugin.PluginDetails.PluginGuid,card);
